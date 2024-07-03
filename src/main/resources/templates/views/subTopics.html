@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.1/css/bulma.min.css">
+</head>
+<body>
+
+    <nav th:replace="components/navbar :: nav_bar">
+
+    </nav>
+
+
+    <div class="rows" style="display: flex; justify-content: center; width: 100%;">
+        <div style="width: 80%;">
+            <div th:each="subTopic : ${subTopicList}" class="column" style="margin-top: 20px;">
+                <div class="box has-background-primary has-text-black" style="display: flex; align-items: center; justify-content: space-between;">
+                    <div th:text="${subTopic.name}" style="font-weight: bold; font-size: 1.5em;"></div>
+                    <button class="button is-warning">Estudiar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</body>
+</html>
